@@ -1,3 +1,6 @@
+
+# This Function gives you a brief Picture of what 4 way swap does
+
 def FourWaySwap(s):
 	temp = s[3]
 	s[3] = s[2]
@@ -5,7 +8,11 @@ def FourWaySwap(s):
 	s[1] = s[0]
 	s[0] = temp
 	return s
+#Clearly it is just rotation of the values
 
+
+#Lets solve it Layers, Each Layer defining a boundary, Where you perform this cyclic swap on the edges of the layer
+# We do the 4 way swap on the corners first, then perform the same cyclic swap clockwise.
 def RotateMatrix(Matrix):
         NumberOfRows = len(Matrix)
         NumberOfColumns = len(Matrix[0])
@@ -24,7 +31,7 @@ def RotateMatrix(Matrix):
                         Matrix[i][last] = top
         return Matrix         
 
-                
+
 
 print FourWaySwap([1,2,3,4])
 Matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
