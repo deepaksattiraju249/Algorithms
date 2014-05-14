@@ -1,0 +1,11 @@
+def reverse(s, i):
+    if(i == len(s)/2):
+        return s
+    else:
+        temp = s[-i]
+        s[-i] = s [i]
+        s[i] = temp
+        return reverse(s, i+1)
+
+a = list("deepak")
+reverse(a,0)
