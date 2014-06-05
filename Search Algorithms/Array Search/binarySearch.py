@@ -1,4 +1,4 @@
-
+#sorted array
 def BinarySearch(array,item):
 	lo = 0
 	hi = len(array)
