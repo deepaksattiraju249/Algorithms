@@ -12,6 +12,11 @@ int max(int a, int b)
 	return a>b ? a: b;
 }
 
+int min(int a,int b)
+{
+	return a < b ? a:b;
+}
+
 
 int get_height(struct node *root)
 {
@@ -23,6 +28,24 @@ int get_height(struct node *root)
 	return 1 + max(get_height(root->left), get_height(root->right));
 
 }
+
+
+int get_minheight(struct node *root)
+{
+	if(root == NULL)
+	{
+		return 0;
+	}
+	
+	return 1 + min(get_height(root->left), get_height(root->right));
+
+}
+
+bool check_if_balanced(struct node *root)
+{
+	return get_height(root) == get_minheight(root) ? 1 : 0;
+}
+
 
 int main()
 {
