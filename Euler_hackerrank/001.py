@@ -25,10 +25,7 @@ Sample Output
 2318
 '''
 
-
-
-
-def s(n):
+def sum_of(n):
     return n*(n+1) /2
 
 t = input()
@@ -38,4 +35,4 @@ for _ in xrange(t):
     n5 = n/5
     n15 = n/15
     
-    print 3*s(n3) + 5*s(n5) - 15*s(n15)
+    print 3*sum_of(n3) + 5*sum_of(n5) - 15*sum_of(n15)
